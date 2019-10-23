@@ -229,10 +229,10 @@ extern "C" {
 // Below SPI and I2C definitions already done in the core
 // Could be redefined here if differs from the default one
 // SPI Definitions
-#define PIN_SPI_MOSI            PB15
-#define PIN_SPI_MISO            PB14
-#define PIN_SPI_SCK             PB13
-#define PIN_SPI_SS              PB12
+#define PIN_SPI_MOSI            PB15 //PB5
+#define PIN_SPI_MISO            PB14 //PA6
+#define PIN_SPI_SCK             PB13 //PA5
+#define PIN_SPI_SS              PB12 //PA4
 
 // I2C Definitions
 #define PIN_WIRE_SDA            PB7

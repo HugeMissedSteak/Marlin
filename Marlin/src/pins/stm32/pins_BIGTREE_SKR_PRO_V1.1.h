@@ -269,3 +269,14 @@
   #endif
 
 #endif // HAS_SPI_LCD
+
+//#define SD_DETECT_PIN    PB11
+//#define SCK_PIN          PA5
+//#define MISO_PIN         PA6
+//#define MOSI_PIN         PB5
+//#define SS_PIN           PA4
+
+
+//#define ON_BOARD_SPI_DEVICE SPI3    //SPI1
+//#define ONBOARD_SD_CS_PIN  PA4   // Chip select for "System" SD card
+//#define ONBOARD_SD_CS_PIN  PIN_SPI_SS
