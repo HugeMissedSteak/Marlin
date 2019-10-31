@@ -768,7 +768,7 @@
  * vibration and surface artifacts. The algorithm adapts to provide the best possible step smoothing at the
  * lowest stepping frequencies.
  */
-//#define ADAPTIVE_STEP_SMOOTHING
+#define ADAPTIVE_STEP_SMOOTHING
 
 /**
  * Custom Microstepping
@@ -897,7 +897,7 @@
 //#define LCD_DECIMAL_SMALL_XY
 
 // The timeout (in ms) to return to the status screen from sub-menus
-//#define LCD_TIMEOUT_TO_STATUS 15000
+#define LCD_TIMEOUT_TO_STATUS 45000
 
 // Add an 'M73' G-code to set the current percentage
 //#define LCD_SET_PROGRESS_MANUALLY
@@ -1819,91 +1819,91 @@
 
   #if AXIS_IS_TMC(X)
     #define X_CURRENT     800  // (mA) RMS current. Multiply by 1.414 for peak current.
-    #define X_MICROSTEPS   16  // 0..256
+    #define X_MICROSTEPS   32  // 0..256
     #define X_RSENSE     0.11
     #define X_CHAIN_POS    -1  // <=0 : Not chained. 1 : MCU MOSI connected. 2 : Next in chain, ...
   #endif
 
   #if AXIS_IS_TMC(X2)
     #define X2_CURRENT    800
-    #define X2_MICROSTEPS  16
+    #define X2_MICROSTEPS  32
     #define X2_RSENSE    0.11
     #define X2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(Y)
     #define Y_CURRENT     800
-    #define Y_MICROSTEPS   16
+    #define Y_MICROSTEPS   32
     #define Y_RSENSE     0.11
     #define Y_CHAIN_POS    -1
   #endif
 
   #if AXIS_IS_TMC(Y2)
     #define Y2_CURRENT    800
-    #define Y2_MICROSTEPS  16
+    #define Y2_MICROSTEPS  32
     #define Y2_RSENSE    0.11
     #define Y2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(Z)
     #define Z_CURRENT     800
-    #define Z_MICROSTEPS   16
+    #define Z_MICROSTEPS   32
     #define Z_RSENSE     0.11
     #define Z_CHAIN_POS    -1
   #endif
 
   #if AXIS_IS_TMC(Z2)
     #define Z2_CURRENT    800
-    #define Z2_MICROSTEPS  16
+    #define Z2_MICROSTEPS  32
     #define Z2_RSENSE    0.11
     #define Z2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(Z3)
     #define Z3_CURRENT    800
-    #define Z3_MICROSTEPS  16
+    #define Z3_MICROSTEPS  32
     #define Z3_RSENSE    0.11
     #define Z3_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E0)
     #define E0_CURRENT    800
-    #define E0_MICROSTEPS  16
+    #define E0_MICROSTEPS  32
     #define E0_RSENSE    0.11
     #define E0_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E1)
     #define E1_CURRENT    800
-    #define E1_MICROSTEPS  16
+    #define E1_MICROSTEPS  32
     #define E1_RSENSE    0.11
     #define E1_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E2)
     #define E2_CURRENT    800
-    #define E2_MICROSTEPS  16
+    #define E2_MICROSTEPS  32
     #define E2_RSENSE    0.11
     #define E2_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E3)
     #define E3_CURRENT    800
-    #define E3_MICROSTEPS  16
+    #define E3_MICROSTEPS  32
     #define E3_RSENSE    0.11
     #define E3_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E4)
     #define E4_CURRENT    800
-    #define E4_MICROSTEPS  16
+    #define E4_MICROSTEPS  32
     #define E4_RSENSE    0.11
     #define E4_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E5)
     #define E5_CURRENT    800
-    #define E5_MICROSTEPS  16
+    #define E5_MICROSTEPS  32
     #define E5_RSENSE    0.11
     #define E5_CHAIN_POS   -1
   #endif
@@ -2074,12 +2074,12 @@
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  4
+    #define X_STALL_SENSITIVITY  2
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-    #define Y_STALL_SENSITIVITY  4
-    //#define Z_STALL_SENSITIVITY  8
+    #define Y_STALL_SENSITIVITY  2
+    //#define Z_STALL_SENSITIVITY  2
     //#define SPI_ENDSTOPS              // TMC2130 only
-    //#define IMPROVE_HOMING_RELIABILITY
+    #define IMPROVE_HOMING_RELIABILITY
   #endif
 
   /**
@@ -2422,7 +2422,7 @@
  * Enables G53 and G54-G59.3 commands to select coordinate systems
  * and G92.1 to reset the workspace to native machine space.
  */
-//#define CNC_COORDINATE_SYSTEMS
+#define CNC_COORDINATE_SYSTEMS
 
 /**
  * Auto-report temperatures with M155 S<seconds>
@@ -2487,7 +2487,7 @@
  * High feedrates may cause ringing and harm print quality.
  */
 //#define PAREN_COMMENTS      // Support for parentheses-delimited comments
-//#define GCODE_MOTION_MODES  // Remember the motion mode (G0 G1 G2 G3 G5 G38.X) and apply for X Y Z E F, etc.
+#define GCODE_MOTION_MODES  // Remember the motion mode (G0 G1 G2 G3 G5 G38.X) and apply for X Y Z E F, etc.
 
 // Enable and set a (default) feedrate for all G0 moves
 //#define G0_FEEDRATE 3000 // (mm/m)
