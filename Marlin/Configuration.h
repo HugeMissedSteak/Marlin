@@ -857,12 +857,12 @@
  * Z Servo Probe, such as an endstop switch on a rotating arm.
  */
 //#define Z_PROBE_SERVO_NR 0       // Defaults to SERVO 0 connector.
-#define Z_SERVO_ANGLES { 10, 90 } // Z Servo Deploy and Stow angles
+//#define Z_SERVO_ANGLES { 10, 90 } // Z Servo Deploy and Stow angles
 
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-#define BLTOUCH
+//#define BLTOUCH
 
 /**
  * Touch-MI Probe by hotends.fr
@@ -1071,7 +1071,7 @@
  */
 
 // Min software endstops constrain movement within minimum coordinate bounds
-#define MIN_SOFTWARE_ENDSTOPS
+//#define MIN_SOFTWARE_ENDSTOPS
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
@@ -1079,7 +1079,7 @@
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
-#define MAX_SOFTWARE_ENDSTOPS
+//#define MAX_SOFTWARE_ENDSTOPS
 #if ENABLED(MAX_SOFTWARE_ENDSTOPS)
   #define MAX_SOFTWARE_ENDSTOP_X
   #define MAX_SOFTWARE_ENDSTOP_Y
