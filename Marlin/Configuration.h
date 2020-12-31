@@ -846,6 +846,9 @@
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
 
+// Force the use of the probe for Z-axis homing
+//#define USE_PROBE_FOR_Z_HOMING
+
 /**
  * Z_MIN_PROBE_PIN
  *
@@ -2072,6 +2075,11 @@
 // (For CR-10 owners who want to replace the Melzi Creality board but retain the display)
 //
 #define CR10_STOCKDISPLAY
+
+//
+// Ender-2 OEM display, a variant of the MKS_MINI_12864
+//
+//#define ENDER2_STOCKDISPLAY
 
 //
 // Ender-2 OEM display, a variant of the MKS_MINI_12864
