@@ -1117,7 +1117,6 @@
   void tmc_disable_stallguard(TMC2209Stepper &st, const bool restore_stealth) {
     st.en_spreadCycle(!restore_stealth);
     st.TCOOLTHRS(0);
-    st.en_spreadCycle(!restore_stealth);
   }
 
   bool tmc_enable_stallguard(TMC2660Stepper) {

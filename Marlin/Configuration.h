@@ -1395,7 +1395,7 @@
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
 #endif
 
-// Homing speeds (mm/m)
+// Homing speeds (mm/min)
 #define HOMING_FEEDRATE_XY (30*60)
 #define HOMING_FEEDRATE_Z  (3*60)
 
